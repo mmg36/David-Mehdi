@@ -1,0 +1,425 @@
+\documentclass[12 pt]{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{graphicx}
+\begin{document}
+\title{Investment Management Research}
+\author{David Agha}
+\maketitle
+\tableofcontents
+\section{Introduction}
+The aim of this report is to look into different methods of active investment management and assess their return rate. 
+\section{Previous research}
+Here are some of the methodologies that I used:
+\begin{itemize}
+\item Try to group stocks together in terms of their relative risks. Make substantial investments in the stocks that have 100%+ return potential. 
+\item The higher the companies cash balance the worse it usually performs compared to its peers. 
+\item When analysing data based on experiments, I found weekly and monthly data to be the most reliable. Daily data is usually to noisy to get reliable results from for an analysis of about 10 years, at the same time, if we go longer than monthly data then a lot of fluctuations would be averaged out. 
+\item The ideal minimum price of a stock should be around \$ 15. Penny stocks are usually to risky to invest in and big companies have usually passed their growth stage therefore not an enormous opportunity.
+\item Good returns come when the stock is breaking from a strong base. For example in this \href
+{https://www.google.com/url?q=https%3A%2F%2Fwww.google.co.uk%2Ffinance%3Fchdnp%3D1%26chdd%3D1%26chds%3D1%26chdv%3D1%26chvs%3Dmaximized%26chdeh%3D0%26chfdeh%3D0%26chdet%3D1157140800000%26chddm%3D487960%26chls%3DIntervalBasedLine%26q%3DNASDAQ%3ABOOM%26%26fct%3Dbig%26ei%3DvVT0UYDbNcvGwAO9ngE}{chart} 
+we see a large base (I guess this is sort of related to the momentum that we were discussing). 
+\item Breakout above its 30 weeks average: If a stock does not breakout above its 30 wma (weeks mean average) on its initial weekly breakout, its declining 30 wma could prove to be resistance and ultimately could push the stock lower over time.
+\item Show massive weekly volume: Extreme volume expansion (number of shares traded) is a very good sign of a valuable stock at the breakout point.
+
+\item The stock  should show a fairly steep angle of attack 
+Just draw a line on the recent high prices traded in the market and if the angle is about 35 to 40 then it is a very good investment - This one should be treated with caution!
+
+\item company has consistently reported quarterly revenue and earnings per share that have not deviated significantly from each other. In a best case scenario we would like to see earnings that have increased slightly over the past few quarters.  What we don't want to see is a company with a bumpy track record. It is very important to see a jump in earnings but a jump in revenues would still be a good indicator.
+
+\item Are earnings sustainable -> I guess you can’t really implement this and this should be checked by the person who is looking through the data.  Check seekingalpha.com to view the conference call for different companies and analyse thier earnings. Generally a sequential improvement is a very good indicator of a soon to become valuable stock and shows that earnings are sustainable. Always compare the values from that year ( same quarter) to this year’s values and see if there is a growth or not. 
+\item Price to earning ratio should be about 10 or less. This one is debatable though maybe you can invest in the stocks that have a P/E ratio as high as 15 too.
+\item If you conclude that earnings are sustainable then  it is time to look into the operating leverage and the margins. Operating leverage is how much a company's net income will increase per dollar of additional revenue. Firms with high operating leverage tend to have low variable costs compared to their fixed costs. Therefore they get a lot back if they increase their volume. The best case scenario is of course the combination of soaring revenue and low variable costs. This is the holy grail of investing and we should find a way that makes us able to detect this scenario using algorithms.
+\item  Backlog figure - Which is essentially the future contracts that company has already signed and is a good indicator for how the company will be doing in the near future. Possibly a good idea to see where we can get this data from and put it in the code so that we can ask for this data when we want to do further analysis on the data. 
+
+\item Due to stock option grants, executives already have a big share of the companies that they run and when they buy even more shares in the open market this signals a very big change in the price of that share in the near future. Along the same line it is usually important to see an institution or high net worth individual file a fresh 13d or 13g (they are legal documents that show someone has 5\% or more share in a companies stocks). So potentially trying to analyse this data or write a code that automatically deals with this?
+
+\item Shares should have low market cap and low float ( low number of total shares available to be traded in the public market). This makes price fluctuations a bit easier hence less momentum required to move the stock prices considerable higher.
+
+\item  Make sure there is no secondary stock offering -> they can absolutely kill the stock. 
+
+\item Calculate return potential -> multiply earning per quarter by 80 and that is the share price that you would expect after a rise. When stock is breaking out of a stable value always compare the base value with the predicted future value and compare your upside gain to your loss. I think for the time being a 10 to 1 risk to reward ratio should be a good start but then this has to be tested again!
+
+\item Look how much diversification you want to incorporate into your portfolio - this is a very important factor that we need to come up with a strategy for. 
+
+\item Stocks that we are searching for are yet to be discovered by the Wall Street and they have no listed options. Again this is very hard to asses and to be fair I couldn't come up with a reliable test for this but the logic behind the idea makes sense to me. 
+\item See if they have any big competition in the area that they are active in -  A monopoly increases the value when the stock is growing.  
+
+\item Short investment are usually the smart investments and if the stock of a company is going up then there is no reason for it to have too many short bets against it.
+
+\item Most investors love stock split  but in many cases at least in short term returns won’t be that great. In fact when a stock makes a significant move to much higher prices and there is now two or three more shares available in the market it becomes significantly harder for momentum money to move the stock. Therefore, it is recommended that you should sell your stock just after there is a stock split and then if the company is still in a good position after a few weeks then consider buying it again. 
+
+\item After a major stock advance followed by a major insider selling. What you need to be watchful of is if one or more insiders sell a majority of their stock in the company. This usually doesn't work in favour of the company in the future. 
+\item Get out of a position is a stock is advertised in stocks -> This is probably the worst thing that can happen to a company
+
+\item When a company reports expansion. It is usually worthwhile considering your investment again. if there are plans for expansion then companies are not going to be 100 \% efficient for a few quarters and this means that earnings would be lower than expected by customers (and compared to the previous quarters) and this will reduce the share price.
+
+\item  When companies report high quarterly earnings or a big improvement in something at the end of the day, their share price suddenly jumps in the next day (there is a considerable jump) It is a good idea to try and buy this gap - but then again it should be hard to gather data on quarterly reports automatically for a company!
+
+\item If you have missed the first breakout there is a chance that there is another breakout in a month or so and usually after the first 2 or 3 weeks dumb money goes to another stock and prices will become rather stable. This is again another good opportunity to invest in the stocks however, you are less likely to make a lot of money in this case - This is something that I don’t really understand its logic and I think for the time being we should exclude it and then put it to test after we have developed a solid framework! 
+\end{itemize}
+
+Below is some of the experimental stuff that I found/read when playing around with data - so don't take them as seriously as the previous ones. 
+\begin{itemize}
+\item Companies that you are investing in should be marathoners not sprinters. So a 10\% growth (i.e. a 6 to 7\% growth after tax deductions is sustainable) but a 15\% is a delusional long term goal. 
+\item Make sure company is investing in R\& D (not sure how we can get this data from). A figure between 4 to 10\% of net sales is a reasonable expenditure on R\& D. 
+
+\item The efficiency of pricing in fixed income markets leaves little room for successful active management. Government bonds trade in most competitive markets in the world, allowing no opportunities for active management to create and edge. Large cap U.S equities operate in similarly efficient environment. Small caps domestic stocks trade in less efficient markets affording thoughtful investors the possibility of beating the market. Less heavily researched foreign securities generally present superior active management opportunities (maybe we should focus on this segment of the market after we have developed a solid code that can analyse the market!) 
+
+\item One of the most important things that determine the value of the stock  is the issuing company’s ability to make profit in the future (think Enron) so this might be another factor that we should analyse in our code. But any ideas of how we can analyse this? 
+
+\item Many experts tend to recognise that currencies tend to follow a mean reverting process. Thus, price changes in short periods of time exist but in long run there is no overall effect. So this might be an important thing to consider when constructing a portfolio - For short terms ones maybe we need to hedge the risk with futures! 
+
+\item India is the biggest consumer of gold followed by China and the U.S. Maybe worth looking at the economies of these countries when deciding on gold as a part of the investment.
+
+\end{itemize}
+
+\section{Statistical data}
+
+I think \href{http://stats.oecd.org/index.aspx}{this} will give all of the data that we need. Have a look at let me know if it is good enough for what you want. This has the data for OECD leading indicators as well. 
+
+\section{Commodities}
+When I was working on my own I used \href{http://futures.tradingcharts.com/menu.html}{trading charts} but this is very basic and it is not easy to work with it specially if you require historical data for testing. Thus, I think Blomberg would be the best option for this. I did look for it online but I don't think there is anything reliable and free. Since you mentioned the stocks covering these commodities are you considering futures and swaps too?\\ \href{https://globalderivatives.nyx.com/nl/commodities/nyse-liffe/contract-list}{This} seems to be a fairly comprehensive source too. 
+
+I have heard that Thomson Reuters is very comprehensive as well but I have never worked with it. What's your take on this?
+
+\section{Active vs Passive for small cap}
+As you predicted active management in this sector usually under-performs the index as well. If we want to do any testing the main problem that we face is the fact that a lot of funds will be liquidated at some point (for example \href{https://personal.vanguard.com/pdf/s362.pdf}{this} paper shows that about 45\% of the large cap funds were liquidated in a 15 year period). If you want to run some testing I think this is a big problem that we need to fix first - any ideas how we should go about this?\\
+\href{http://www.wisdomtree.com/blog/index.php/active-management-in-small-cap-equities-no-proof-of-outperformance/}{This} website has a good chart comparing the performance of small caps versus the index funds. As you can see majority of the index funds out perform the actively managed funds. On the other hand out of the three categories of small, large and mid cap if there is any opportunity for active management, small cap would give us the best opportunity as it gets the least coverage from the financial institutions. It would be great if you could send me \href{http://www.iijournals.com/doi/abs/10.3905/joi.2013.22.2.055#sthash.hXeHnb7I.p0sb7Ay5.dpbs}{this} article as I didn't have access to it. It is worth mentioning that out of these actively managed funds, those that survive usually have a marginally better return. For example comparing \href{https://personal.vanguard.com/us/funds/snapshot?FundId=0048&FundIntExt=INT}{a vanguard fund} and \href{http://www.ishares.com/us/products/239775/ishares-sp-smallcap-600-value-etf}{small cap s\&p 600}.
+In conclusion I think it is worth looking into this section a bit more but I am not sure what your strategy is? what exactly should I look for - do I just pick a bunch of funds and test them or is there a systematic way of doing this? Also, where do you usually get your data for small caps from?\\
+Finally I think \href{http://www.spindices.com/documents/spiva/spiva-us-mid-year-2013.pdf}{this} has the result of most of the testing that you want. 
+\section{Equity risk premium}
+No citations on google scholar mentioned.\\
+While there are several competing risk and return models in finance the all share some common assumptions about risk: 
+\begin{itemize}
+\item They all define risk in terms of variance in actual returns around an expected return. Thus, an investment is riskless when actual returns are equal to expected returns all the time. 
+\item Risk has to be measured from the perspective of the marginal investor which is well diversified. There is a firm specific component that investments (or a few related investments) in particular and then there is the market risk that affects a larger subset (or all) of the investments. 
+\end{itemize}
+\subsection{Determinants of equity risk premiums}
+\begin{itemize}
+\item Risk aversion and consumption preferences: \\
+As investors become more risk averse the equity risk premium climbs. 
+\item Economic risk:\\
+This comes from the general concerns from the economic concerns. So for an economy with a more predictable inflation, interest rates and economic growth means that ERP should be lower.
+\item Information:\\
+When you invest in equities, the risk in the underlying economy is manifested in volatility in the earnings and cash flows reported by individual firms in that economy. Information about these changes is transmitted to markets in multiple ways, and it is clear
+that there have been significant changes in both the quantity and quality of information available to investors over the last two decades.  This is a good example why some investors require higher risk premiums when investing in emerging markets compared others. 
+\item Liquidity:\\
+If investors have to accept large discounts on estimated value or pay high transactions costs to liquidate equity positions, they will be pay less for equities today and thus demand a large risk premium.
+\item Catastrophic risk: \\
+When investing in equities, there is always the potential for catastrophic risk, i.e. events that occur infrequently but can cause dramatic drops in wealth. An example in equity markets would include the great depression from 1929-30 in the United States.
+\item Government policy:\\
+For example the role of government in the banking crisis of 2008. 
+\item The behavioural/irrational component:\\
+People don't behave completely rational. 
+\end{itemize}
+There are three main methods to estimate the equity risk premium: 
+\begin{itemize}
+\item Survey premiums: Basically just go and ask investors how much premium they require to invest in an asset?
+\item Historical premiums: Look at the historical data and try to estimate the data in the future. This is the most common method to estimate the risk premium. The difference, on an annual basis, between the two returns is computed and represents the historical risk premium.
+\end{itemize}
+\subsection{Small caps and other risk premiums}
+In computing an equity risk premium to apply to all investments in the capital
+asset pricing model, we are essentially assuming that betas carry the weight of measuring
+the risk in individual firms or assets, with riskier investments having higher betas than
+safer investments. Studies of the efficacy of the capital asset pricing model over the last
+three decades have cast some doubt on whether this is a reasonable assumption, finding
+that the model understates the expected returns of stocks with specific characteristics;
+small market cap companies and companies low price to book ratios, in particular, seem
+to earn much higher returns than predicted by the CAPM. It is to counter this finding that
+many practitioners add an additional premium to the required returns (and costs of
+equity) of smaller market cap companies. Banz (1981) looked
+returns on stocks from 1936-1977 and concluded that investing in the smallest companies
+(the bottom 20\% of NYSE firms in terms of capitalization) would have generated about
+6\% more, after adjusting for beta risk, than larger cap companies. Studies find small cap premiums of about 7%
+from 1955 to 1984 in the United Kingdom, 8.8\% in France and 3\% in Germany, and a
+premium of 5.1\% for Japanese stocks between 1971 and 1988. while the empirical evidence supports the notion that small cap
+stocks have earned higher returns after adjusting for beta risk than large cap stocks, it is
+not as conclusive, nor as clean as it was initially thought to be. The argument that there is,
+in fact, no small cap premium and that we have observed over time is just an artifact of
+history cannot be rejected out of hand.
+\section{Global evidence on the equity risk premium}
+This article has 181 citations. \\
+This article sheds light on the equity risk premium by addressing two fundamental questions:
+How big has the equity risk premium been historically? And what can we expect for the future? We start by examining equity returns in 16 different countries over the 103-year period from 1900 to 2002.Stock markets are volatile, with significant variation in year-to-year returns. In order to make inferences, we need a long time series that incorporates bad times as well as good. 
+\par The evidence on long-run risk premiums presented in this article is derived from a unique new database comprising annual returns on stocks, bonds, bills, inflation, and currencies for 16 countries over the period 1900 – 2002. The countries include the United States and Canada, the United Kingdom, seven markets from what is now the Euro currency area, three other European markets, two Asia-Pacific markets, and one African market. Together, these countries made up 94\% of the free float market capitalization of all world equities at the beginning of 2003, and we estimate that they constituted over 90\% by value at the start of our period in 1900. The 103-year historical estimates of equity premiums reported here are lower than was previously thought and other studies suggest. Nonetheless, the historical record may still overstate expectations. First, even if we have been successful in avoiding survivor bias within each index, we still focus on markets that survived, omitting countries such as Poland, Russia, or China whose compound rate of return was –100\%. Although there is certainly room for debate, we do not consider market survivorship to be the most important source of bias when inferring expected premiums from the historical record.
+\par We have seen that very long series of stock market data are needed for estimating risk premiums. But even with 103 years of data, the potential inaccuracy in historical risk premiums is still fairly high. o estimate the equity risk premium to use in
+discounting future cash flows, we need the expected future risk premium, which is the arithmetic mean of the possible premiums that may occur. Suppose future returns are drawn from the same distribution as those that occurred in the past. In this case, the expected risk premium is the arithmetic mean (or simple average) of the one-year historical premiums. When returns are lognormally distributed, the
+arithmetic mean return will exceed the geometric mean return by half the variance (There are some graphs in the actual document but to avoid making this crowded I omitted them so if you find something interesting just refer to the actual article). But since history may have turned out to be unexpectedly kind to (or harsh on) stock market investors, there are cogent arguments for going beyond raw historical estimates. So to summarise:
+\begin{itemize}
+\item First, the whole idea of using the achieved risk premium to forecast the future required risk premium depends on having a long enough period to iron out good and bad luck — yet as we noted earlier, our estimates are imprecise even with 103 years of data.
+\item Second, the expected equity risk premium could for good reasons vary over time. 
+\item Third, we must take account of the fact that stock market outcomes are influenced by many factors, some of which (like removal of trade and investment barriers) may be nonrecurring, which implies projections for the future premium that differ from the past.
+\end{itemize}
+\section{THE EQUITY PREMIUM-A Puzzle}
+This article has 5135 citations and \href{http://www.sciencedirect.com/science/article/pii/0304393285900613}{this} is the link to it.\\
+This paper is very mathematical I tried to summarise some of it and ignored a lot of the theory behind it. There was another really good mathematical paper explaining all of the different methods used to quantify ERP.However, I didn't summarise that as I wasn't sure if this is the approach you want to take or simply use the numbers quoted in articles? 
+
+\par We emphasize that our analysis is not an estimation exercise which is to obtain better estimates of key economic parameters. Rather it is a quantitative exercise designed to address a very particular question. In this paper we use a variation of Lucas'(1978) pure exchange model. The approach used in this article was to equate the risk free bill and price of equity share at time t. Then they introduced a couple of parameters and by modifying that increased the risk in the bill to for example the equity share. 
+\section{Assessing Alternative Proxies for the Expected Risk Premium}
+This article has 467 citations.This article is very detailed - I personally recommend using one of the methods used here to estimate ERP.\\
+Cost of equity capital is generally conceived to be the
+discount rate the market applies to a firm's expected future cash flows to arrive at current
+stock price, but, as such, it is not directly observable. Provided current stock price is observable, deducing a firm's cost of equity capital is possible if one can observe the
+market's forecasts of future cash flows; these data are also not directly discernable.We examine the relative reliability of five methods of
+generating cost of equity capital estimates based on equating current price with discounted
+future cash flows, which we refer to as: 
+\begin{enumerate}
+\item $r_{DIVPREM}$
+\item $r_{GLSPREM}$
+\item $r_{GORPREM}$
+\item $r_{OJNPREM}$
+\item $r_{PEGPRE}$
+\end{enumerate}
+\subsection{$r_{DIVPREM}$}
+Gebhardt et al. (2001), imposes the assumption that a firm's return-on-equity (ROE) reverts
+to the industry-level ROE beyond the forecast horizon. $r_{GORPREM}$, employed in Gordon and
+Gordon (1997), imposes the assumption that a firm's ROE reverts to its cost of equity
+$r_{DIVPREM}$,capital beyond the forecast horizon.
+$r_{OJNPREM}$, derived
+in Ohlson and Juettner-Nauroth
+(2003) and operationalized in Gode and Mohanram (2003), imposes the assumption that a
+firm's abnormal earnings growth reverts to an economy-wide level beyond the forecast
+horizon. Finally,
+$r_{PEGPREM}$, also
+derived by Ohlson and Juettner-Nauroth (2003) but opera-
+tionalized by Easton (2004), imposes the assumption of zero growth in abnormal earnings
+beyond the forecast horizon. We find that the average
+estimated risk premium varies from a low of 1 percent ($r_GLSPREM$) to a high of 6.6 percent
+While some have charged that a risk premium in excess of 6 percent is too high,
+($r_OJNPREM$).
+we find that the average re	alized premium ($r_REALPREM$) during our sample period is even
+larger at 12.5 percent
+\subsection{Other methods}
+All of the models explained in this paper come from the dividend discount formula shown below:
+\[
+P_0 = \sum_{t=1}^{\infty}(1+r)^{-t}E_0dps_t
+\]
+Where: 
+\begin{itemize}
+\item $P_0 = $ price at time t = 0.
+\item r = estimated cost of equity capital.
+\item $E_0$ = the expectations operator.
+\item $dps_t$ = dividends per share.
+\end{itemize}
+We convert the expected cost of equity capital estimates to estimates of the risk premium by deducting the risk-free rate of interest (rf). The five-year Treasury Constant Maturity Rate as of the end of the month in which we estimate expected cost of equity capital
+serves as our $r_f$ estimate
+\subsubsection{Target price method}
+\[
+p_0 = \sum_{i=1}^5(1+r_{DIV})^{-t}+(1+r_{DIV})^{-5}p_5
+\]
+where:
+\begin{itemize}
+\item $p_5$ is the price at time t=5. 
+\item $r_{DIV}$ estimated cost of equity capital. 
+\end{itemize}
+Current stock price (Po) equals the stock price reported on CRSP on the Value Line publication date or closest date thereafter within three days of publication.
+\subsubsection{Industry method $R_{GLSPREM}$}
+\[
+p_0 = b_0 +\sum_{i=1}^{11}(1+r_{GLS})^{-t}((ROE_t-r_{GLS})b_{t-1}) + (r_{GLS}(1+r_{GLS})^{11})^{-1}(ROE_{12}-r_{GLS})b_{11})
+\]
+where:
+\begin{itemize}
+\item $ROE_t$ = return on equity for period  t = $\frac{eps_t}{b_{t-1}}$.
+\item $eps_t$ = book value per share at year t.
+\item $r_{GLS}$ = estimated cost of equity capital. 
+\end{itemize}
+\subsubsection{Finite horizon method $R_{GORPREM}$}
+\[
+P_0 = \sum_{i=1}^4 (1+R_{GOR})^{-t}(dps_t)+(r_{GOR}(1+r_{GOR})^4)^{-1}(eps_5)
+\]
+where $r_{GOR}$ is the estimated cost of equity capital.
+There were a couple of other methods which I didn't write to keep this as short as possible. If you decide to take this approach then we can think about all of the modelling options. 
+\subsubsection{Average Realized Premium} 
+Some prior research estimates the cost of equity capital using average realized returns
+under the assumption that, when averaged over large samples, realized returns are an un-
+biased estimate of the market's required return (i.e., the cost of equity capital). However,
+existing research demonstrates that realized returns may not be a reliable proxy for the cost
+of equity capital, even when averaged over large numbers of firms or long periods. For
+example, Elton (1999, 1199) notes that realized returns are on average less than the risk-
+free rate for some periods of ten years or more and he suggests this is evidence that
+"realized returns are a very poor measure of expected returns". Generally Guay et al. (2003) conclude that none of the estimates in the aforementioned methods are highly
+correlated with future returns, but among those listed, $r_{GLS}$ tends to be the most highly
+correlated. In order for the results of this study to be reliable, future realized returns must
+be a valid proxy for expected returns. Vuolteenaho (2002) concludes that
+$r_u$ about future cash flows is the dominant factor in firm-level stock returns. Lakonishok (1993) concludes it would take 60 years of realized returns for all firms in the
+capital market to have sufficient statistical power to prove market beta is a priced risk
+factor. Clearly this engenders highly unpalatable assumptions regarding inter-temporal/
+cross-firm stability in r.
+\subsection{Model development}
+The first model we analyse includes market beta, leverage, information risk and a measure of firm size based on the market value of equity. 
+\[
+r_{PREM_{it}} = \gamma_0+\gamma_1UBETA_{it}+\gamma_2DM_{it}+\gamma_3INFO_{it}+\gamma_4LMKVL_{it}+\epsilon_{it}
+\]
+where:
+\begin{itemize}
+\item $r_{PREM}$ is the estimated risk premium produced by one of the methods mentioned above. 
+\item UBETA is the unlevered CAPM beta.
+\item DM is leverage
+\item INFO is the information risk 
+\item LMKVL is the maret value of equity 
+\end{itemize}
+\section{Perspectives on the equity risk premium}
+This article has 44 citations.\\
+The decline in the real return on bonds, combined with the relative stability of the real return on equity, has increased the equity premium over time. Over the 1802-2004 period, the equity risk premium as measured from compound annual returns and in relation to bonds rose from 2.24 percent to 2.89 percent to 4.53 percent. Measured in relation to T-bills, the equity risk premium has increased even more. The
+equity risk premium can be defined by the reference asset class, time period chosen, or method of calculating mean returns so as to take on a wide range of values. Its maximum value is calculated by using the arithmetic mean return of historical stock returns and subtracting the mean return on the highest quality short-dated securities, such as T-bills. In calculations of the equity risk premium, certain biases must be recognized: the international survivorship bias; failure to take transaction costs and diversification benefits into account; investor ignorance of risks, returns, and mean reversion; taxes and individuals' pension assets; and biases in the historical record of bond returns.
+\par The equity premium puzzle is centered on the "reasonable" level of risk aversion for investors. Recall that risk premiums exist because individuals are assumed to have declining marginal utility of consumption. How fast this utility declines measures the investor's degree of
+risk aversion. In early risk models, the investor's utility function, U, was assumed to be a function of wealth, W, such that
+\[
+U(w)= \left[	\frac{1}{1-A}\right]w^{1-A}
+\]
+The parameter A is the coefficient of relative risk aversion, or the percentage change (elasticity) of the marginal utility of wealth caused by a 1 percent change in the level of wealth. In other words, A is directly related to the pain felt by investors when their wealth falls. Then the equity premium can be approximated by:
+\[
+EP \approx A(\sigma^2)
+\]
+Where $\sigma$ is the standard deviation of returns on an investors portfolio. 
+\section{The long run equity risk premium}
+This article is cited 51 times.\\
+The evidence suggest that there is no correlation between past returns and the level of the long-run risk premium. An alternative to using past-returns is to examine a measure of valuation. With only 21 observations each with a 10-year horizon, it is impossible to evaluate the accuracy of the market excess return forecasts. Even simple correlations with economic data are complicated because of the overlapping nature of the risk premium forecasts. Our preliminary examination of the determinants of the long-term risk premium suggests that premiums not influenced by past stock returns. However, we present intriguing evidence that there is a positive correlation between real interest rates and the long-run premiums as well as implied volatility and the risk premium. Unfortunately, further analysis requires many more years of data.
+\section{The equity risk premium is much lower than you think it is:empirical estimates from a new approach}
+This article has 64 citations.\\
+The most commonly cited estimates are those provided by Ibbotson Associates (1998) in their annual review of historic rates of return observed since 1926 on various portfolios of stocks and bonds. Their data indicate that the risk premium lies in the region of 7 to 9 percent (depending on the maturity of the risk-free rate used). Others, notably Siegel (1992), suggest that there is some variation in this ex post estimate, depending on the particular period examined. Evidence from the investment community is generally consistent with the view that the risk premium is much lower than eight percent. Survey evidence (e.g., Benore, 1983) points to rates that are below five percent. Analysis of the discount rates used in the discounted cash flow valuations provided in analyst research reports also suggests that the equity risk premium is below five percent. Some even go so far as to recommend that the premium be dropped to zero. Abel, 1999)
+Why might the historical data imply a risk premium that is too high? Two possible reasons are as follows. First, the period examined is unusually “lucky”. While extending the sample period to earlier years is a potential solution to this problem, that approach could contaminate the estimates if the risk premium has experienced structural shifts over the long time periods examined. Second, the data exhibit survivor bias: some stock markets collapsed and those markets that survived, like the US exchanges, exhibit better performance than expected.
+\par Financial economists have often expressed concerns about accounting earnings deviating from “true” earnings (and book values of equity deviating from market values), in the sense that accounting numbers are noisy measures and easily manipulated.The
+primary advantage of using the accounting stream is the ability to check the underlying growth assumption. The 5-year earnings growth rates forecast by IBES analysts in our sample are around 12 percent. Assuming this growth rate for dividends in perpetuity, we obtain risk premia similar to those estimated in prior research: in excess of 8 percent, relative to the 10-year risk free rate. In contrast, the dividend growth rate in perpetuity that corresponds to the assumptions we use to generate the lower risk premium estimates is only about 7.5 percent.
+\par While optimistic analyst forecasts might bias upwards our risk premium estimates, there
+are two methodological simplifications that create a small bias in the opposite direction. First, although the valuation relation is based on dividends being paid at the end of each year, the actual cash flows occur during the year, typically in four quarterly payments. Actual prices are higher than they would have been if cash flows occurred only at the end of the year, and this depresses the estimated k. Second, April is past the “beginning” of the year, corresponding to the date that last year’s dividend is paid. As a result, the price as of April is higher than it would have been at the beginning of the year. The bias in the estimated risk premium when this effect is ignored is slightly greater for firms with fiscal year-ends other than December. Neither effect is material, however, and overall we still expect our risk premium estimates to be biased upward.
+\par In sum, our estimates of the equity risk premium using the abnormal earnings approach are considerably lower and more stationary than those estimated in the past using other approaches. Prior estimates of risk premia using historical data and ex ante dividend growth approaches are at least twice as large as those we derive using the abnormal earnings approach. The contrast between our results and the traditional estimates of risk premium is even more stark in light of the well-known optimism in analyst forecasts; adjusting for that bias would decrease further our estimates of the risk premium.
+\par There is general acceptance among academic financial economists that the equity risk premium is 7 percent or more relative to the long-term risk-free rate, and another 200 basis points higher relative to the short-term risk-free rate. This view is based for the most part on the past performance of the US stock market. We claim that these estimates are too high, at least for the 1985-1998 period, and that the risk premium implied by market prices is only half as much, or less.While it is true that IBES analysts predict near-term (five-year ahead) earnings growth forecasts that are typically in the neighborhood of 12 percent, we show that these forecasts are systematically optimistic relative to actual earnings observed in our sample period. As a result, prior studies that have projected analyst 5-year growth rates to perpetuity generate risk premium estimates that are also too high.
+\section{Contemporary Accounting Research Earnings Quality and the Equity Risk Premium: A Benchmark Model}
+This article has 78 citations. \\
+\par This paper solves a model that links earnings quality to the equity risk premium in an infinite horizon consumption capital asset pricing model (CAPM) economy. In the model, risk-averse traders hold diversified portfolios consisting of risk-free bonds and shares of many risky firms. Despite widespread concern about earnings quality, researchers have not yet provided a benchmark model specifying how earnings quality affects earnings–value relations and the equity risk premium. Prior valuation research has not studied earnings quality as a determinant of value. Valuation theory has focused on the nature of persistent and transitory earnings, representations of earnings value relations, accounting conservatism, and the influence of earnings growth.
+\section{Dividen yields are equity risk premium}
+This article has 325 citations. \\
+\par This paper discusses three separate interrelated topics: equity risk premiums, random walks and the bond stock yield spread. The following definitions are used throughout this article: 
+\begin{itemize}
+\item RSTK = expected rate of return (capital gains plus dividend yields) of the stock market. 
+\item RBILL = expected rate of return on treasury bills.
+\item RGOVT = expected rate of return on long term government bonds. 
+\item RCORP = expected rate of return on long term corporate bonds. 
+\item Therefore we can conclude that: 
+\[
+RSTK = RBILL + (RGOVT - RBILL) + (RCORP - RGOVT) + (RSTK - RCORP) 
+\]
+\end{itemize}
+Something that all of these papers agree on is that ERP is a strong function of time and it is fairly difficult to predict it in the future accurately. A vital component of the equity risk premium is unknown - namely the stock market return. Hence, we never really know ex ante what RPE is or how it is changing. At best we estimate its size and direction of movement. Three of many methods for estimating rsik premiums are especially popular: 
+\begin{itemize}
+\item The method of realised or ex post market rates of return. 
+\item The use of Grodon-Shapiro constant model.
+\item The use of spreads between different classes of bonds. 
+\end{itemize}
+\subsection{Realised return method}
+The realised return method replaces the unobservable risk premium by an average of its realisations over past time periods where a realisation is defined as the actual market return less the actual treasury bill return. Because the market return fluctuates dramatically from period to period, the real realised premium is very noisy as well. A quick solution is to average this value over a long period (e.g 50 years) but then again that's not the ideal solution.  The justification for averaging is that the supply and demand don't change over a long period of time. There is more justification for why the do this so if you are interested refer to the main article.  
+\subsection{Constant growth method}
+In this method the expected rate of return on the stock market equals a dividend yield variable on the market plus the anticipated growth rate of the dividends. The model is written as follows: 
+\begin{itemize}
+\item RSTK = DYLD(1 + GROW) + GROW 
+\item DYLD = The current dividend yield on the market. \
+\item GROW = The nominal expected growth rate of the market dividends.  
+\item Thus the RPE is given by: 
+\[
+RPE = DYLD(1+GROW) + GROW - RBILL
+\] 
+\end{itemize}
+The model's drawback is the unpleasant shortcoming that the anticipated growth rate of dividend is unobservable. 
+\subsection{yield spread method}
+In this model the security market line is a linear relationship between the expected returns and the betas of all of the assets including bonds and stocks. 
+\subsection{Dividend yield method}
+The main difficulty in using the constant growth model to measure the equity risk premium is having to measure the anticipated growth rate of dividends. The Golden rule states that if the economy maximises consumption per capita, then rate of growth of output equals the the physical marginal productivity of the capital which in turn equals the rate of interest. Based on this rule RPE can be calculated as: \
+\[
+RPE \sim DYLD(1  + RBILL) 
+\]
+For which GROW is the nominal dividend growth and the nominal rate of interest is RBILL. 
+\section{Equity risk premium: emerging vs developed markets}]
+This article has 84 citations.\\
+ Conform expectations we find that the equity risk premium in emerging markets is significantly higher than in developed markets. However, the extent to which emerging stock markets reward investors varies through time. We observe that the time varying nature of the equity risk premium relates more to economic cycles than to the presence of some sort of structural break based on stock market liberalisations. On the basis of our equally weighted indices we accept the hypothesis of a larger ERP for emerging markets compared to develop markets at a 5\% significance level. Table 6 gives the corresponding statistics. Calculating a Sharpe ratio, i.e. adjusting the ERP for standard deviation also shows higher Sharpe ratios for emerging markets. There are some interesting stuff about the time varying nature of ERP in this article but to keep this brief I didn't include it here but in summary it claims that the difference between the emerging
+and developed ERP follows cyclical pattern resembling the global business cycle
+ \par Our downside risk analysis reveals that the higher rewards in emerging markets come with higher risk. However, risk and return are dependent on the sample period taken. We have observed time varying behaviour in the emerging market ERP data, but cannot claim the presence of a structural break in the data. There is no difference in ERP in period before and after the market liberalisations.
+\section{Active management in small caps}
+In this past I summarise the pros and cons of active management (specially for the small caps) versus just investing in an index fund. Each article has its own subsection with the number of citations. 
+\subsection{The active management in small cap U.S equities}
+This article has 6 citations. \\
+For the past 20 years, average small-cap U.S. equity managers have outperformed the Russell 2000 Index by over 500 bps per year. Although advocates of efficient markets argue that consistent outperformance is impossible, active investment managers contend that because many small-cap stocks are underresearched and mispriced, professional investors should be able to seize opportunities and obtain superior returns. However, it is important to note that survivorship bias exists because poor-performing managers are
+much more likely to stop reporting returns to manager databases than top-performing managers. As a result , over a longer period of time, better-performing managers dominate the universe. The author concludes that approximately 20 percent of small-cap
+managers’ outperformance occurs because the first three years of a reporting manager’s performance record are usually the best years. No significant evidence is found to support the assertion that survivorship bias or persistent factor biases can explain the balance of outperformance of TISC. Thus, the author suggests that the small-cap U.S. equity market holds a lot of opportunity for investors seeking to allocate active management risk.
+\subsection{The Value of Active Mutual Fund Management: An Examination of the Stockholdings and Trades of Fund Managers}
+This article has 491 citations.\\
+If mutual fund managers have stock-picking skills, then stocks widely held by funds should outperform their benchmarks. Similarly, stocks that are newly purchased should outperform their benchmarks, while stocks that are newly sold should not outperform their benchmarks. On the other hand, if the average mutual fund manager has no talent for picking stocks, then we should find no relation between stock returns and the level of mutual fund holdings or trades. Funds with superior past performance tend to flaunt their records through
+press releases and advertisements that promote the funds. Although there is the standard disclaimer in all fund promotions that past performance is not necessarily indicative of future performance, there is a strong undertone in these promotions that past performance is a good measure of stock selection ability.
+\par We find that stocks held by mutual funds do not outperform the general population of stocks. However, when we examine mutual fund trades, we find that stocks that the funds actively buy have significantly higher returns than stocks that they actively sell. This return difference is roughly 2\% during the one-year holding period following the trades, adjusted for the characteristics of the stocks that are traded. This performance estimate is more than double the stockholdings based estimate provided by Daniel, Grinblatt, Titman, and Wermers (1997), which is 0.8\% per year over the same time period. The larger magnitude of our performance estimate illustrates the advantage our trades-based measure confers
+\par Overall, our evidence is suggestive of the funds possessing superior stock selection skills. The value of any superior information that some mutual funds might possess, however, is fairly short-lived—the stocks that they buy outperform the stocks they sell for only the first year following the trades. The fact that mutual funds often hold stocks longer than one year indicates that they often avoid selling stocks from their portfolios because of transaction cost considerations, or that they have only limited abilities in finding new, underpriced stocks to buy.
+\subsection{Allocating between active and passive management}
+This article has 41 citations.\\
+Optimization is the essential apparatus for choice in modern portfolio theory. Formal applications of portfolio optimization now span many levels of the investment process, including global market allocation, currency risk hedging, portfolio construction for tracking, portfolio construction for enhanced returns, and optimal hedging with derivatives. Optimization applied to investment decisions is better understood and more reliable for some problems than for others. For example, pension fund asset allocation studies based on historical return data almost always use optimization to analyse choices. In contrast, portfolio managers who actively run concentrated portfolios of venture capital start-ups or initial public offerings rarely use optimization. What makes optimization true in theory but erroneous in practice in some applications is the inputs.
+The inputs to the typical mean-variance optimization problem are explicit:
+\begin{itemize}
+\item A well-defined objective function
+\item Quantified risk preference
+\item Specific asset return forecasts
+\item Specific asset volatility forecasts
+\item Specific asset covariance forecasts
+\end{itemize}	
+During tough stock market years, active managers will likely declare victory. During bull market years, indexers will make the triumphant boasts.
+\subsection{The dimensions of active management}
+
+\section{How active is your Fund manager? A new measure that predicts the performance}
+This article has 435 citations.\\
+Tracking error volatility (hereafter just "tracking error") is the traditional way to measure active management. It represents the volatility of the difference between a portfolio return and its benchmark index return. However, the two distinct approaches to active management contribute very differently to tracking error, despite the fact that either of them could produce a higher alpha. We argue that Active Share should be used in conjunction with tracking error to gain a comprehensive picture of active management.
+\par these results suggest that the most active diversified stock pickers and
+concentrated stock pickers have enough skill to generate alphas that remain positive even after fees and transaction costs. In contrast, funds focusing on factor bets seem to have zero to negative skill, which leads to particularly bad performance after fees. Hence, it appears that there are some mispricings in individual stocks that active managers can exploit, but broader factor portfolios are either too efficiently priced to allow any alphas or too difficult for the managers to predict. Closet indexers, unsurprisingly, exhibit zero skill but underperform because of their expenses.
+\par Tracking error is defined as the time series standard deviation of the difference between a fund return ($R_{fund,t}$) and its benchmark return index ($R_{index,t}$): 
+\[
+\text{Tracking error = stdev}[R_{fund,t}-R_{index,t}]
+\]
+A typical active manager aims for an expected return higher than the benchmark index, but at the same time he wants to have a low tracking error (volatility) to minimize the risk of signiÖcantly underperforming the index. Active share is defined as:
+\[
+\frac{1}{2}\sum_{i=1}^N|w_{find,i}-w_{index,i}|
+\]
+\par \textbf{This is a very important point that we should be careful about when doing any testing} Determining the benchmark index for a large sample of funds is not a trivial task. Since 1998, the SEC has required each fund to present a benchmark index in its prospectus. However, this information is not part of any publicly available mutual fund database, and reading thousands of fund prospectuses is not a viable research strategy for us, so we need to estimate the benchmark from the data. Our solution is to compute the Active Share of a fund with respect to various benchmark
+indexes and to pick the index with the
+lowest
+Active Share. This index therefore has the
+greatest amount of overlap with the stock holdings of the fund.
+Besides being intuitive, our methodology has a few distinct advantages. It cannot be completely o§ ñif it assigns an incorrect benchmark, it happens only because the fund's portfolio actually does resemble that index more than any other index. It also requires no return history and can be determined at any point in time as long as we know the portfolio holdings. Thus we can even use it to track a fund's style changes over time. We found that tracking error is by far the strongest predictor of Active Share: it explains
+about 16-20\% of the variance in Active Share (the year dummies explain about 4\%). Economically this means that a 5\% increase in annualized tracking error increases Active Share by about 7\%. This is significant, but it still leaves a great deal of unexplained variance in Active Share.
+\par funds with the highest Active Share significantly outperform their benchmarks both before and after expenses, while funds with the lowest Active Share underperform after expenses. In contrast, active management as measured by tracking error does not predict higher returns if anything, using this traditional measure makes active funds seem to perform worse. there are enough small inefficiencies in the pricing of individual stocks to allow the most active stock pickers to generate a positive alpha, and this is the dimension captured by Active Share. In contrast, fund managers in general do not seem to have timing ability with larger factor portfolios, so the high tracking-error funds (with factor bets and concentrated stock picks) do not add value relative to the low tracking-error funds (diversified stock pickers and closet indexers).
+\section{Active shares and Mutual fund performance}
+Actively managed funds are different in terms of how actively they are managed and the type of active management they practice. The average actively managed fund weak performance losing to its benchmark by -0.41\%. Having said that, the most active fund managers have beaten their indexes by 1.26\% after fees and expenses (2.61\% before fees). TO quantify the active management of a fund the following definition is used in this article: 
+\[
+\text{ Active share } = \frac{1}{2}\sum_{i=1}^N\left|w_{fund, i}-w_{index, i}\right|
+\]
+Where $w_{fund, i}$ is weight of stock i in the fund's portfolio and $w_{fund, i}$ is the weight of the same stuck in the fund's benchmark index.
+Note that active share and tacking error emphasise different things, active share is a proxy for stock selection and tracking error is a proxy for systematic factor risk. Diversified stock pickers have a high active share and a low tracking error whereas funds that focus on factor bets take the opposite approach. 	I assume that closet indexing is something that you are not really looking into so I didn't write anything about it here but in general it can be concluded that these funds under-perform truly active managed funds. 
+\par I found that the most active stock pickers have been able to add value for their investors, beating their benchmark indices by about 1.26\% a year after all fees and expenses. Factor bets have destroyed value after fees. Closet indexers have essentially just matched their benchmark index performance before fees, which has produced consistent underperformance after fees. The results are similar over the 2008–09 financial crisis, and they also hold separately within large-cap and small-cap funds. Closet indexers who stay very close to the benchmark index are a particularly bad deal because they are almost guaranteed to underperform after fees given the small size of their active bets, yet they account for about one-third of all mutual fund assets.
+\section{The performance of small cap mutual funds: Evidence for UK}
+No citations for this paper so far.\\
+Some important findings of this paper are: 
+\begin{itemize}
+\item UK small cap funds deliver a statistically significant unconditional multi-factor alpha of 4.08\% per annum, net of fees. 
+\item There is a severe survivorship bias of 3.9\% per annum. This raises doubt on previous small cap fund studies that did not include dead funds.
+\item Introducing time variation in betas consumes most of the statistical significance of alphas which might indicate that small cap
+managers are successfully timing the market.
+\item In contrast to the large cap literature, strong persistence (hot hands) exists for past winners. The top performing funds deliver a
+statistically significant alpha of 4.99\% per year even after taking into account time variation in betas.
+\item We document a strong and positive size effect at the fund level. A value weighted portfolio of all funds produces a significantly positive conditional multi-factor alpha, which is confirmed in cross-sectional tests.
+\end{itemize}
+the average small cap fund generates a positive and economically large 1-factor alpha of 2.17\% per annum. However, statistical power is low which means we cannot reject that alpha is zero. In contrast to studies on large cap mutual funds the result is clearly more positive because alpha is at least not significantly negative. Moreover, 7\% of all funds in the sample generate positive abnormal returns. Finally, we provide a measure of survivorship bias by comparing the results for dead and live funds. A significant survivorship bias of 3.36\% per annum exists. It can be concluded that previous studies that do not include dead funds are severely biased.
+\par The models discussed previously are so-called unconditional models. These models assume that there is a fixed beta for each pricing factor during the entire performance measurement period and do not allow for the time-varying of betas. However, if expected risk and return vary over time these models are likely to be biased. Therefore using a conditional model, it can be concluded that the average actively managed small cap fund does not deliver statistically significant abnormal returns. However, conditional alpha is still economically large and previous sections have shown that a small portion of funds succeeds in generating statistically significant abnormal returns both under a one-factor and a multi-factor model.
+\section{Emerging market mutual fund performance: Evidence for Poland}
+This article has 22 citations. \\
+Studying an emerging market provides an excellent opportunity to test whether the consensus on the inability of mutual funds in developed and highly efficient markets to beat the market, also holds in less efficient markets.  By studying a survivorship bias free sample of 506 mutual funds from France, Germany, Italy, United Kingdom and The Netherlands Otten and Bams find that the average European mutual fund produces an alpha that is insignificantly different from zero. Adding back management fees, led to 4 out of 5 countries exhibiting significant outperformance at an aggregate level. The authors argue that the smaller market importance of European mutual funds might put them in a better position to follow or even beat the market. This in sharp contrast to US funds which represent over 30\% of stock market capitalisation, while European funds only represent about 10\% of their local stock market capitalisation.
+\par The Polish mutual fund industry is characterised by a significant presence of foreign firms, which posses a combined market share of 74\%. This in contrast to for instance Germany (19\%), France (16\%) and the United Kingdom (44\%).4 This can partly be explained by the high foreign bank ownership in Central and Eastern European countries. On average, Polish equity mutual funds represent less than 5\% of domestic market capitalisation, which is far below European (about 10\%) and US statistics (about 30\%). In their study Otten and Bams find that European mutual funds perform better compared to US mutual funds. The authors suggest that this is due to the smaller importance of the European mutual fund industry compared to the domestic market capitalisation. As the European fund industry as a whole only covers about 10\% of the total market it might be more easy for them to outperform the remaining 90\% of the market capitalisation, compared to the US where the entire fund industry is three times as big. This argument might also hold for the Polish market, where mutual funds represent even less than 5\% of the market. This smaller market importance might put Polish fund managers in a better position to outperform their relevant benchmark.
+\par Our main conclusions are five-fold. First, we corroborate the evidence found in previous studies on developed markets; Polish funds underperform their relevant benchmarks. Second, domestic funds outperform international funds. While domestic funds produce Carhart alpha's that are indifferent from zero, international funds underperform significantly. Third, both domestic and international funds have exposure outside their region. That is, international funds exhibit a home bias and domestic funds also invest internationally. This confirms earlier results where domestic investors profit from informational advantages over foreign investors. Fourth, adding back management fees to excess returns leads to significantly positive alpha's for domestic funds, while international funds now produce alphas that are indifferent from zero. This reveals the fact that domestic managers are able to beat their local market, but charge investors too much for this. Fifth, we document strong persistence in performance. 
+\section{New Zealand mututal fund: Measuring performance and persistence in performance}
+This article has 32 citations. \\
+This article also emphasises on using muultifactor models. To summarize the results of applying the multifactor model to domestic and international equity funds. First, after controlling for market risk, size, book-to-market and momentum we find alphas insignificantly different from zero. Second, both types of equity funds are relatively more exposed to small caps. Third, both types of funds are growth oriented. Fourth, although international funds are momentum driven, domestic funds exhibit a reverse pattern. These results are robust to the inclusion of a bond index and the inclusion of a separate New Zealand equity index (international funds) to take a potential home bias into account.
+\par The hypothesis that mutual funds with an above average return in one period will also have an above average return in the next period is called the hypothesis of persistence in performance. It has to be noted that the documented persistence in performance is mainly
+driven by icy hands, instead of hot hands indicating that funds that underperform (significantly negative alpha) in one period are most likely to underperform in the next period. Investors should therefore avoid these funds. However, evidence of persistently out-performing funds (significantly positive alpha) is absent. 
+\section{Statistical tests for return-based style analysis}
+This article has 18 citations.\\
+In this paper we have presented a technique to assess the statistical properties of results
+obtained from return-based style analysis. Mainly econometric and mathematical stuff which U think are completely irrelevant to our research but since you said read everything I put this here too.
+\section{The performance of local versus foreign mutual fund managers}
+
+\end{document}
